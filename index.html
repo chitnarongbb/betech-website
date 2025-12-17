@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th="BeTech | ที่ปรึกษาด้าน IT และ AI" data-en="BeTech | IT & AI Consulting"></title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* กำหนดสีหลักของแบรนด์ */
+        :root {
+            --primary-blue: #0066FF; /* สีน้ำเงินสดใส */
+            --accent-blue: #004C99;
+        }
+
+        /* ใช้ Font Kanit สำหรับภาษาไทย และ Inter สำหรับตัวเลข/ภาษาอังกฤษ */
+        body {
+            font-family: 'Kanit', 'Inter', sans-serif;
+            color: #333;
+            background-color: #f8faff; /* พื้นหลังสีฟ้าอ่อนมากๆ */
+        }
+
+        .text-primary-blue { color: var(--primary-blue); }
+        .bg-primary-blue { background-color: var(--primary-blue); }
+        .hover\:bg-accent-blue:hover { background-color: var(--accent-blue); }
+        .shadow-blue { box-shadow: 0 10px 30px -10px rgba(0, 102, 255, 0.3); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation (Fixed Top) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="text-3xl font-bold text-primary-blue">BeTech</div>
+                <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 hidden sm:block">Consulting</div>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="text-gray-700 hover:text-primary-blue transition duration-150" data-th="หน้าแรก" data-en="Home">หน้าแรก</a>
+                <a href="#services" class="text-gray-700 hover:text-primary-blue transition duration-150" data-th="บริการของเรา" data-en="Services">บริการของเรา</a>
+                <a href="#ai-solutions" class="text-gray-700 hover:text-primary-blue transition duration-150" data-th="โซลูชัน AI" data-en="AI Solutions">โซลูชัน AI</a>
+                <a href="#about" class="text-gray-700 hover:text-primary-blue transition duration-150" data-th="เกี่ยวกับเรา" data-en="About Us">เกี่ยวกับเรา</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary-blue transition duration-150" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</a>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center space-x-3">
+                <button id="lang-toggle" class="px-3 py-1 text-sm font-semibold rounded-full border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white transition duration-200">
+                    EN
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section (Updated with Modern Abstract SVG) -->
+        <section id="home" class="relative overflow-hidden bg-primary-blue/5 py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="md:pr-10">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-gray-900">
+                        <span class="block" data-th="ก้าวสู่อนาคต" data-en="Step into the future">ก้าวสู่อนาคต</span>
+                        <span class="block text-primary-blue" data-th="ด้วยที่ปรึกษาด้าน AI & IT" data-en="with AI & IT Consulting">ด้วยที่ปรึกษาด้าน AI & IT</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-600 leading-relaxed" data-th="เราช่วยวางกลยุทธ์, ติดตั้งระบบ AI และปรับเปลี่ยนองค์กรของคุณให้พร้อมรับมือกับโลกดิจิทัลอย่างมืออาชีพ" data-en="We strategize, implement AI systems, and transform your organization to navigate the digital world professionally.">
+                        เราช่วยวางกลยุทธ์, ติดตั้งระบบ AI และปรับเปลี่ยนองค์กรของคุณให้พร้อมรับมือกับโลกดิจิทัลอย่างมืออาชีพ
+                    </p>
+                    <div class="mt-10 flex space-x-4">
+                        <a href="#services" class="bg-primary-blue text-white font-semibold py-3 px-8 rounded-full shadow-blue hover:bg-accent-blue transition duration-300 transform hover:scale-105" data-th="ดูบริการของเรา" data-en="Explore Services">
+                            ดูบริการของเรา
+                        </a>
+                        <a href="#contact" class="border-2 border-primary-blue text-primary-blue font-semibold py-3 px-8 rounded-full hover:bg-primary-blue hover:text-white transition duration-300" data-th="นัดหมายฟรี" data-en="Book Free Consultation">
+                            นัดหมายฟรี
+                        </a>
+                    </div>
+                </div>
+                <!-- Visual Placeholder (Modern Tech Diagram) -->
+                <div class="hidden md:block">
+                    <div class="w-full rounded-3xl p-6 flex items-center justify-center">
+                        <svg class="w-full h-auto text-primary-blue" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="350" rx="20" fill="url(#hero-grad)"/>
+                            <!-- Abstract Circuit Lines -->
+                            <path d="M50 80h100v190h-50" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2"/>
+                            <path d="M450 80c-50 0-100 50-100 100s50 100 100 100" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2"/>
+                            <circle cx="250" cy="175" r="75" stroke="white" stroke-width="3" opacity="0.6"/>
+                            <!-- Center Data Flow Indicator -->
+                            <path d="M250 100v150" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="250" cy="175" r="5" fill="white"/>
+
+                            <defs>
+                                <linearGradient id="hero-grad" x1="0" y1="0" x2="500" y2="350" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0066FF"/>
+                                    <stop offset="1" stop-color="#4C8CFF" stop-opacity="0.9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Services Section (Core Offerings) - Updated with Clean SVG Icons -->
+        <section id="services" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4" data-th="บริการที่ปรึกษาหลักของเรา" data-en="Our Core Consulting Services">บริการที่ปรึกษาหลักของเรา</h2>
+                    <p class="text-xl text-gray-500" data-th="นำทางธุรกิจของคุณผ่านความซับซ้อนของเทคโนโลยี" data-en="Navigating your business through the complexities of technology.">นำทางธุรกิจของคุณผ่านความซับซ้อนของเทคโนโลยี</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Service 1: IT Strategy -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-t-4 border-primary-blue hover:shadow-2xl transition duration-300">
+                        <div class="text-primary-blue mb-4">
+                            <!-- SVG: Strategy / Target -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M10 2v2m4-2v2m0 20v-2m-4 2v-2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800" data-th="กลยุทธ์ IT และการวางแผน" data-en="IT Strategy & Planning">กลยุทธ์ IT และการวางแผน</h3>
+                        <p class="text-gray-600" data-th="ออกแบบแผนงาน IT ที่สอดคล้องกับเป้าหมายทางธุรกิจของคุณ เพื่อให้เกิดการเติบโตอย่างยั่งยืนและมีประสิทธิภาพสูงสุด" data-en="Designing IT roadmaps aligned with your business goals for sustainable growth and maximum efficiency.">ออกแบบแผนงาน IT ที่สอดคล้องกับเป้าหมายทางธุรกิจของคุณ เพื่อให้เกิดการเติบโตอย่างยั่งยืนและมีประสิทธิภาพสูงสุด</p>
+                    </div>
+
+                    <!-- Service 2: AI Implementation -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-t-4 border-primary-blue hover:shadow-2xl transition duration-300">
+                        <div class="text-primary-blue mb-4">
+                            <!-- SVG: AI / Chip -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect>
+                                <line x1="8" y1="8" x2="16" y2="8"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                <line x1="8" y1="16" x2="16" y2="16"></line>
+                                <line x1="12" y1="16" x2="12" y2="21"></line>
+                                <line x1="12" y1="3" x2="12" y2="8"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800" data-th="การประยุกต์ใช้ AI ในองค์กร" data-en="Enterprise AI Implementation">การประยุกต์ใช้ AI ในองค์กร</h3>
+                        <p class="text-gray-600" data-th="การนำเครื่องมือ AI มาใช้ในขั้นตอนการทำงานจริง ตั้งแต่ Chatbots, Automation ไปจนถึงการวิเคราะห์ข้อมูลเชิงลึก" data-en="Integrating AI tools into real-world workflows, from Chatbots and Automation to advanced data analysis.">การนำเครื่องมือ AI มาใช้ในขั้นตอนการทำงานจริง ตั้งแต่ Chatbots, Automation ไปจนถึงการวิเคราะห์ข้อมูลเชิงลึก</p>
+                    </div>
+
+                    <!-- Service 3: Digital Transformation -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-t-4 border-primary-blue hover:shadow-2xl transition duration-300">
+                        <div class="text-primary-blue mb-4">
+                            <!-- SVG: Transformation / Chart Line -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18 17l-4.5-4.5-2.5 2.5l-5-5"></path>
+                                <polyline points="15 17 17 17 17 15"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800" data-th="การเปลี่ยนผ่านสู่ดิจิทัล" data-en="Digital Transformation">การเปลี่ยนผ่านสู่ดิจิทัล</h3>
+                        <p class="text-gray-600" data-th="ช่วยให้องค์กรของคุณปรับตัวเข้าสู่ยุคดิจิทัลอย่างราบรื่นและลดความเสี่ยง พร้อมเพิ่มความสามารถในการแข่งขันในตลาด" data-en="Guiding your organization to smoothly adapt to the digital era, minimizing risk and maximizing market competitiveness.">ช่วยให้องค์กรของคุณปรับตัวเข้าสู่ยุคดิจิทัลอย่างราบรื่นและลดความเสี่ยง พร้อมเพิ่มความสามารถในการแข่งขันในตลาด</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. AI Solutions Section (Specific Focus) - Updated with Brain/Network SVG -->
+        <section id="ai-solutions" class="py-20 sm:py-28 bg-primary-blue/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Image/Visual Placeholder (Brain/Network SVG) -->
+                    <div class="aspect-video bg-white rounded-3xl shadow-xl p-6 flex items-center justify-center">
+                         <svg class="w-full h-auto text-primary-blue" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Brain Shape -->
+                            <path d="M150 20C100 20 60 70 60 100s40 80 90 80c50 0 90-30 90-80s-40-80-90-80z" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <!-- Neural Connections / Network -->
+                            <line x1="150" y1="100" x2="250" y2="100" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <line x1="150" y1="100" x2="180" y2="40" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <line x1="150" y1="100" x2="120" y2="160" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <!-- Data Nodes -->
+                            <circle cx="250" cy="100" r="8" fill="currentColor"/>
+                            <circle cx="180" cy="40" r="8" fill="currentColor"/>
+                            <circle cx="120" cy="160" r="8" fill="currentColor"/>
+                            <circle cx="150" cy="100" r="10" fill="white" stroke="currentColor" stroke-width="2"/>
+                            <text x="146" y="105" font-family="Inter" font-size="8" fill="#0066FF" font-weight="bold">AI</text>
+                        </svg>
+                    </div>
+                    <!-- Text Content -->
+                    <div>
+                        <span class="inline-block px-4 py-1 text-sm font-semibold rounded-full bg-primary-blue text-white mb-4" data-th="ความเชี่ยวชาญเฉพาะทาง" data-en="Specialized Expertise">ความเชี่ยวชาญเฉพาะทาง</span>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4" data-th="AI คือหัวใจสำคัญของการทำงาน" data-en="AI is the Core of Modern Workflow">AI คือหัวใจสำคัญของการทำงาน</h2>
+                        <p class="text-xl text-gray-600 mb-6" data-th="เราไม่ได้แค่แนะนำ แต่เราช่วยออกแบบและติดตั้ง AI ที่ปรับให้เข้ากับกระบวนการทำงานเฉพาะของคุณ เพื่อเพิ่มประสิทธิภาพ ลดข้อผิดพลาด และเปิดโอกาสทางธุรกิจใหม่ๆ" data-en="We don't just advise; we design and implement AI tailored to your specific processes, boosting efficiency, minimizing errors, and unlocking new business opportunities.">
+                            เราไม่ได้แค่แนะนำ แต่เราช่วยออกแบบและติดตั้ง AI ที่ปรับให้เข้ากับกระบวนการทำงานเฉพาะของคุณ เพื่อเพิ่มประสิทธิภาพ ลดข้อผิดพลาด และเปิดโอกาสทางธุรกิจใหม่ๆ
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center">
+                                <span class="text-primary-blue mr-3">&#10003;</span> 
+                                <span data-th="AI Automation เพื่อการประหยัดเวลา" data-en="Time-Saving AI Automation">AI Automation เพื่อการประหยัดเวลา</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-primary-blue mr-3">&#10003;</span> 
+                                <span data-th="Data Analytics เชิงลึก" data-en="In-Depth Data Analytics">Data Analytics เชิงลึก</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-primary-blue mr-3">&#10003;</span> 
+                                <span data-th="ความปลอดภัยทางไซเบอร์ที่ขับเคลื่อนด้วย AI" data-en="AI-Driven Cybersecurity">ความปลอดภัยทางไซเบอร์ที่ขับเคลื่อนด้วย AI</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Credibility / About Us Snippet -->
+        <section id="about" class="py-20 sm:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-10" data-th="ทำไมต้องเลือก BeTech" data-en="Why Choose BeTech">ทำไมต้องเลือก BeTech</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6">
+                        <p class="text-6xl font-extrabold text-primary-blue mb-2">99%</p>
+                        <p class="text-xl font-semibold text-gray-800" data-th="ความสำเร็จในการติดตั้ง" data-en="Implementation Success Rate">ความสำเร็จในการติดตั้ง</p>
+                        <p class="text-gray-500 mt-2" data-th="ผลงานที่ได้รับการยอมรับจากลูกค้าทั่วโลก" data-en="Proven track record recognized globally.">ผลงานที่ได้รับการยอมรับจากลูกค้าทั่วโลก</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-6xl font-extrabold text-primary-blue mb-2">15+</p>
+                        <p class="text-xl font-semibold text-gray-800" data-th="ปีแห่งประสบการณ์" data-en="Years of Expertise">ปีแห่งประสบการณ์</p>
+                        <p class="text-gray-500 mt-2" data-th="ทีมงานผู้เชี่ยวชาญด้าน IT และ AI โดยตรง" data-en="Directly managed by IT and AI specialists.">ทีมงานผู้เชี่ยวชาญด้าน IT และ AI โดยตรง</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-6xl font-extrabold text-primary-blue mb-2">48H</p>
+                        <p class="text-xl font-semibold text-gray-800" data-th="การตอบกลับที่รวดเร็ว" data-en="Rapid Response Time">การตอบกลับที่รวดเร็ว</p>
+                        <p class="text-gray-500 mt-2" data-th="การสนับสนุนลูกค้า 24/7 เพื่อการทำงานที่ไม่หยุดชะงัก" data-en="24/7 client support for uninterrupted operations.">การสนับสนุนลูกค้า 24/7 เพื่อการทำงานที่ไม่หยุดชะงัก</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact CTA Banner -->
+        <section id="contact-cta" class="bg-primary-blue py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-th="พร้อมที่จะยกระดับธุรกิจของคุณแล้วหรือยัง?" data-en="Ready to elevate your business?">
+                    พร้อมที่จะยกระดับธุรกิจของคุณแล้วหรือยัง?
+                </h2>
+                <p class="text-xl text-primary-blue/20 text-white/90 mb-8" data-th="ให้เราเป็นที่ปรึกษาด้านเทคโนโลยีที่เชื่อถือได้ของคุณ" data-en="Let us be your trusted technology consultant.">
+                    ให้เราเป็นที่ปรึกษาด้านเทคโนโลยีที่เชื่อถือได้ของคุณ
+                </p>
+                <a href="#contact" class="inline-block bg-white text-primary-blue font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105" data-th="ติดต่อผู้เชี่ยวชาญของเรา" data-en="Connect with Our Experts">
+                    ติดต่อผู้เชี่ยวชาญของเรา
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Updated with Modern SVG Social Icons) -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 border-b border-gray-700 pb-8">
+            <!-- 1. Logo & Mission -->
+            <div>
+                <div class="text-2xl font-bold text-primary-blue mb-3">BeTech</div>
+                <p class="text-sm text-gray-400" data-th="ที่ปรึกษาด้าน IT และ AI เพื่อความสำเร็จทางธุรกิจของคุณ" data-en="IT and AI Consulting for your business success.">
+                    ที่ปรึกษาด้าน IT และ AI เพื่อความสำเร็จทางธุรกิจของคุณ
+                </p>
+            </div>
+            <!-- 2. Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4" data-th="ลิงก์ด่วน" data-en="Quick Links">ลิงก์ด่วน</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#services" class="hover:text-primary-blue" data-th="บริการ" data-en="Services">บริการ</a></li>
+                    <li><a href="#ai-solutions" class="hover:text-primary-blue" data-th="โซลูชัน AI" data-en="AI Solutions">โซลูชัน AI</a></li>
+                    <li><a href="#about" class="hover:text-primary-blue" data-th="เกี่ยวกับเรา" data-en="About">เกี่ยวกับเรา</a></li>
+                </ul>
+            </div>
+            <!-- 3. Contact Info -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4" data-th="ข้อมูลติดต่อ" data-en="Contact Info">ข้อมูลติดต่อ</h4>
+                <address class="space-y-2 text-sm text-gray-400 not-italic">
+                    <p data-th="อีเมล: info@betech.co.th" data-en="Email: info@betech.co.th">อีเมล: info@betech.co.th</p>
+                    <p data-th="โทร: +66 2 123 4567" data-en="Phone: +66 2 123 4567">โทร: +66 2 123 4567</p>
+                    <p data-th="ที่อยู่: 123 ถนนเทคโนโลยี กรุงเทพฯ" data-en="Address: 123 Tech Road, Bangkok, Thailand">ที่อยู่: 123 ถนนเทคโนโลยี กรุงเทพฯ</p>
+                </address>
+            </div>
+            <!-- 4. Social Media (Modern SVG Icons) -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4" data-th="ติดตามเรา" data-en="Follow Us">ติดตามเรา</h4>
+                <div class="flex space-x-4 text-xl">
+                    <!-- LinkedIn -->
+                    <a href="#" class="hover:text-primary-blue transition duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <!-- Twitter/X -->
+                    <a href="#" class="hover:text-primary-blue transition duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M22.02 5.56c-.73.32-1.52.54-2.35.63a4.34 4.34 0 0 0 1.9-2.26a8.88 8.88 0 0 1-2.61.99c-1.83-1.92-5.46-1.5-7.39.92a7.7 7.7 0 0 0-5.74-2.92a8.87 8.87 0 0 0-3.1 1.01c-.02 0-.03.02-.05.02s-.03.03-.04.05a.44.44 0 0 0 0 .15c.57 1.13 1.57 2.06 2.76 2.65a4.33 4.33 0 0 1-1.96-.54l-.01 0c.01 4.5 3.19 7.73 7.82 8.41c-.48.24-1 .37-1.55.37a4.33 4.33 0 0 1-3.08-1.29a9.54 9.54 0 0 0 8.8 4.96c.7 0 1.39-.06 2.06-.18c4.67-4.13 5.37-10.74 3.14-15.03z"/>
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#" class="hover:text-primary-blue transition duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center text-sm text-gray-500">
+            &copy; 2025 BeTech Tech Consulting. <span data-th="สงวนลิขสิทธิ์" data-en="All rights reserved.">สงวนลิขสิทธิ์</span>.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript สำหรับการเปลี่ยนภาษา (Thai/English)
+        const langToggle = document.getElementById('lang-toggle');
+        let currentLang = document.documentElement.lang;
+
+        const updateLanguage = (lang) => {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            langToggle.textContent = lang === 'th' ? 'EN' : 'TH';
+
+            // Loop through all elements with data-th/data-en attributes
+            document.querySelectorAll('[data-th], [data-en]').forEach(el => {
+                const thaiText = el.getAttribute('data-th');
+                const engText = el.getAttribute('data-en');
+                
+                if (lang === 'th' && thaiText) {
+                    // Update text content only if it's not the document title
+                    if (el.tagName.toLowerCase() !== 'title') {
+                        el.textContent = thaiText;
+                    } else {
+                        // Special handling for title tag
+                        document.title = thaiText;
+                    }
+                } else if (lang === 'en' && engText) {
+                    if (el.tagName.toLowerCase() !== 'title') {
+                        el.textContent = engText;
+                    } else {
+                        document.title = engText;
+                    }
+                }
+            });
+            
+            // NOTE: The call to toggleMobileMenu was removed here to fix the ReferenceError, 
+            // as the function was not defined.
+        };
+
+        // Initial setup for the title based on the default HTML lang attribute
+        document.addEventListener('DOMContentLoaded', () => {
+             // Find the element that contains the title text (the <title> tag)
+             const titleElement = document.querySelector('title');
+             if (titleElement) {
+                // Ensure the initial title is set correctly on load
+                const initialLang = document.documentElement.lang || 'th';
+                const text = titleElement.getAttribute('data-' + initialLang);
+                if (text) {
+                    document.title = text;
+                }
+             }
+             
+             // Run initial update for all content text as well
+             updateLanguage(currentLang);
+        });
+
+        langToggle.addEventListener('click', () => {
+            const newLang = currentLang === 'th' ? 'en' : 'th';
+            updateLanguage(newLang);
+        });
+
+    </script>
+</body>
+</html>
